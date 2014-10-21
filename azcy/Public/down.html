@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>安徽安振产业投资集团有限公司</title>
+<link rel="stylesheet" href="images/base.css" />
+<link rel="stylesheet" href="images/inside.css" />
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.SuperSlide.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="topArea">
+			<h2 class="logo"><a href="default.html">安徽安振产业投资集团有限公司</a></h2>
+			<p class="set"><a href="#">企业邮箱</a>|<a href="#">办公OA</a>|<a href="#">快速链接</a></p>
+			<form class="sForm" name="search" method="get" action="">
+				<div class="sInputBox"><input type="text" name="search_keyword" value="" placeholder="请输入关键字" x-webkit-speech /></div>
+				<div class="sBtn"><input type="submit" name="" value="搜索" /></div>
+			</form>
+		</div>
+		<div class="nav">
+			<ul class="navs clearfix">
+				<li class="noBg"><a href="default.html">安振首页</a></li>
+				<li><a href="#" class="current">走进安振</a></li>
+				<li><a href="#">旗下企业</a></li>
+				<li><a href="#">产品与服务</a></li>
+				<li><a href="#">新闻中心</a></li>
+				<li><a href="#">人才战略</a></li>
+				<li><a href="#">联系我们</a></li>
+			</ul>
+			<div class="subNav">
+				<div class="sub clearfix">
+					<ul>
+						<li><a href="#">证券投资</a></li>
+						<li><a href="#">实业投资</a></li>
+						<li><a href="#">资产管理</a></li>
+						<li><a href="#">商业银行投资</a></li>
+						<li><a href="#">商业地产投资</a></li>
+						<li><a href="#">证券投资</a></li>
+						<li><a href="#">实业投资</a></li>
+						<li><a href="#">资产管理</a></li>
+						<li><a href="#">商业银行投资</a></li>
+						<li><a href="#">商业地产投资</a></li>
+					</ul>
+					<div class="pictxt">
+						<div class="pic"><img src="images/p242x163.jpg" width="242" height="163"></div>
+						<h2>诚信投资  和谐共存</h2>
+						<p class="info">安徽安振投资有限公司是安徽省国资委直属的国有独资企业，成立于2001年9月，注册资本1.5亿元。公司地处安徽省合肥市庐阳区，经营范围：实业及项目投资，资产管理，财务顾问，投资咨询等。</p>
+					</div>
+				</div>
+				<div class="sub clearfix">
+					<ul>
+						<li><a href="#">证券投资</a></li>
+						<li><a href="#">实业投资</a></li>
+						<li><a href="#">资产管理</a></li>
+						<li><a href="#">商业银行投资</a></li>
+					</ul>
+					<div class="pictxt">
+						<div class="pic"><img src="images/p242x163.jpg" width="242" height="163"></div>
+						<h2>诚信投资  和谐共存</h2>
+						<p class="info">安徽安振投资有限公司是安徽省国资委直属的国有独资企业，成立于2001年9月，注册资本1.5亿元。公司地处安徽省合肥市庐阳区，经营范围：实业及项目投资，资产管理，财务顾问，投资咨询等。</p>
+					</div>
+				</div>
+			</div>
+			<script>
+				$(function(){
+					$(".subNav .sub").each(function(x){
+						$(this).addClass('sub'+ x);
+						var subn = $(this).find('li').length
+						if(subn > 4){
+							$(this).addClass('dbSub');
+						}
+					});
+					$(".navs li").each(function(i){
+						$(this).mousemove(function(){
+							$(".subNav").show();
+							$(".subNav").children().hide();
+							var t = i - 1;
+							$(".sub"+t).show();
+							$(".navs li").removeClass("on");
+							$(this).addClass("on");
+						});
+					});
+					$(".nav").mouseleave(function(){
+						$(".navs li").removeClass("on");
+						$(".subNav").hide();
+						$(".subNav").children().hide();
+					});
+				});
+			</script>
+		</div>
+		<div class="banner"><img src="images/banner_about.jpg" width="1600" height="429"></div>
+	</div>
+	<div class="container">
+		<div class="wrap clearfix">
+			<div class="sidebar">
+				<h2 class="leftTxtTitle">走进安振</h2>
+				<div class="menu">
+					<dl>
+						<dt><a href="#" class="current">集团简介</a></dt>
+						<dt><a href="#">集团文化</a></dt>
+						<dt><a href="#">董事长致辞</a></dt>
+						<dt><a href="#">组织架构</a></dt>
+					</dl>
+				</div>
+				<ul class="leftPic">
+					<li><a href="#"><img src="images/leftPic_01.jpg" width="205" height="70" alt="联系我们" /></a></li>
+				</ul>
+			</div>
+			<div class="main">
+				<div class="location clearfix">
+					<h2>企业文化</h2>
+					<div class="breadcrumbs"><a href="#">首页</a> &gt; <a href="#">走进安振</a> &gt; <a href="#" class="current">集团文化</a></div>
+				</div>
+				<div class="hotNews clearfix">
+					<dl>
+						<dt><a href="#">证监会明确减少审批 券业创新松绑</a></dt>
+						<dd class="date">2013.08.23</dd>
+						<dd class="info">10年间，证券业从全行业的“技术性破产”走向规范发展，如今又站在全面创新的门槛上。《第一财经日报》从昨天在北京召开的“证券行业创新发展研讨会”上获悉，监管层已经明确将改革监管制度，强化证券公司自治权，为创新发展留足制度空间，同时鼓励证券公司集团化经营，发展“不可替代的核心竞争力”。</dd>
+						<dd class="down"><a href="#">我要下载</a></dd>
+					</dl>
+				</div>
+				<div class="list">
+					<ul>
+						<li class="hover"><span class="down"><a href="#">我要下载</a></span><a href="#">公司热浸镀铝锌硅机组采用目前世界上最先进的美钢联法生产工艺</a></li>
+						<li><span class="down"><a href="#">我要下载</a></span><a href="#" target="_blank">安徽省劳动保护条例</a></li>
+
+						<li><span class="down"><a href="#">我要下载</a></span><a href="#">本机组可以选用不同的材料在不同的工艺条件下为建材 、民用、 汽车板和空调冰箱等商品提供优质的产品</a></li>
+						
+						<li><span class="down"><a href="#">我要下载</a></span><a href="#">社会保障卡管理须知</a></li>
+						<li><span class="down"><a href="#">我要下载</a></span><a href="#">关于调整我市职工生育保险医疗待遇的通知</a></li>
+						<li><span class="down"><a href="#">我要下载</a></span><a href="#">产品质量符合GB2518－2004标准。</a></li>
+						<li><span class="down"><a href="#">我要下载</a></span><a href="#">国务院规定我国女职工产假由90天延长至98天</a></li>
+						<li><span class="down"><a href="#">我要下载</a></span><a href="#">全国县以上将设立劳动人事争议仲裁机构</a></li>
+						<li><span class="down"><a href="#">我要下载</a></span><a href="#">“恒久品质，达人立己”是我们的品牌发展战略， “一丝不苟，追求卓越”是我们的工作态度</a></li>
+						<li><span class="down"><a href="#">我要下载</a></span><a href="#">公司热浸镀铝锌硅机组采用目前世界上最先进的美钢联法生产工艺</a></li>
+						<li><span class="down"><a href="#">我要下载</a></span><a href="#" target="_blank">安徽省劳动保护条例</a></li>
+						<li><span class="down"><a href="#">我要下载</a></span><a href="#">本机组可以选用不同的材料在不同的工艺条件下为建材 、民用、 汽车板和空调冰箱等商品提供优质的产品</a></li>
+						<li><span class="down"><a href="#">我要下载</a></span><a href="#">社会保障卡管理须知</a></li>
+						<li><span class="down"><a href="#">我要下载</a></span><a href="#">关于调整我市职工生育保险医疗待遇的通知</a></li>
+						<li><span class="down"><a href="#">我要下载</a></span><a href="#">产品质量符合GB2518－2004标准。</a></li>
+					</ul>
+				</div>
+				<div class="page"><a href="#">首页</a><a href="#">上一页</a><a href="#" class="current">1</a><a href="#">2</a><a href="#">下一页</a><a href="#">尾页</a></div>
+			</div>
+		</div>
+		<div class="wrapBt"></div>
+	</div>
+	<div class="footer">
+		<div class="copy clearfix">
+			<div class="fl">
+				<p class="ftNav"><a href="#">关于我们</a>|<a href="#">资讯中心</a>|<a href="#">下载中心</a>|<a href="#">联系我们</a></p>
+				<p>&copy; copyright 2014 版权所有 安徽安振投资产业集团 <a href="#">皖ICP11010574号</a></p>
+				<p>技术支持：<a href="#">网新科技</a></p>
+			</div>
+			<div class="fr">
+				<ul>
+					<li>分享：</li>
+					<li>分享：</li>
+					<li><a href="#">理财咨询<i><img src="images/p90x90.jpg" width="90" height="90"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--[if lte IE 6]><script src="js/iepng.js"></script><![endif]-->
+</body>
+</html>

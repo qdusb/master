@@ -1,0 +1,54 @@
+@charset "utf-8";
+.header { height:530px; }
+.banner { position:absolute; top:0; left:50%; width:1600px; height:530px; margin-left:-800px; text-align:center; z-index:1; }
+.banner .hd { position:absolute; bottom:65px; left:0; width:100%; height:13px; }
+.banner .hd ul { width:1002px; height:13px; margin:0 auto; }
+.banner .hd ul li { float:left; width:13px; height:13px; margin:0 13px 0 0; background:#fff; font-size:0; line-height:999px; display:inline; overflow:hidden; cursor:pointer; }
+.banner .hd ul .on { background:#da0919; }
+
+.container { height:385px; }
+.wrap { min-height:300px; _height:300px; padding-bottom:0; }
+.gird-s501m501 { padding:0 0 23px; }
+.gird-s501m501 .sidebar { float:left; width:455px; padding:0 23px 0 0; }
+.gird-s501m501 .main { float:right; width:455px; padding:0 0 0 23px; background:url(nico_02.gif) no-repeat left center; }
+
+	/* 首页通用模块 */
+.title .hd { position:relative; height:36px; padding:0; }
+.title .hd h2 { height:36px; padding-left:38px; color:#606060; font:bold 18px/33px 'microsoft yahei'; }
+.title .hd .more { position:absolute; top:0; right:0; padding-left:16px; background:url(nico_01.gif) no-repeat 0 center; font:12px/36px 'microsoft yahei'; overflow:hidden; }
+.title .hd .more a { color:#505050; }
+.title .bd { padding:12px 0 0; }
+
+.news .hd { background:url(ico_11.jpg) no-repeat 0 center; }
+.service .hd { background:url(ico_12.jpg) no-repeat 0 center; }
+.partner .hd { background:url(ico_13.jpg) no-repeat 0 center; }
+
+.hotNews { height:147px; padding:0 0 19px; border-bottom:1px dashed #d0d0d0; }
+.hotNews .pic { float:left; width:141px; height:141px; padding:2px; border:1px solid #e4e4e4; margin-right:21px; }
+.hotNews .info { display:block; overflow:hidden; zoom:1; color:#9e9d9d; line-height:18px; }
+.hotNews .info h3 { color:#0050a2; font:bold 14px/20px 'microsoft yahei'; }
+.hotNews .info h3 a { color:#0050a2; }
+.hotNews .info .d { padding:3px 0 0; color:#525252; }
+.hotNews .info .i { height:80px; padding:8px 0 0; color:#000; line-height:20px; }
+.hotNews .info .m { font-family:'microsoft yahei'; }
+.hotNews .info .m a { color:#0050a2; }
+.list li { padding-left:21px; border-bottom:1px dashed #d0d0d0; background:url(ico_03.gif) no-repeat 4px 12px; color:#000; line-height:28px; }
+.list li span { float:right; padding-right:10px; color:#525252; font-size:11px; }
+
+.partner .bd li { float:left; width:153px; height:46px; margin:0 0 0 6px; border:1px solid #dadada; display:inline; }
+
+.picnews { height:175px; }
+.picnews .pic { float:left; width:169px; height:169px; padding:2px; border:1px solid #e4e4e4; margin-right:21px; }
+.picnews .info { display:block; overflow:hidden; zoom:1; color:#9e9d9d; line-height:18px; }
+.picnews .info h3 { color:#0050a2; font:bold 16px/32px 'microsoft yahei'; }
+.picnews .info h3 a { color:#0050a2; }
+.picnews .info .i { height:100px; padding:8px 0 12px; color:#000; line-height:20px; }
+.picnews .info .m { font-family:'microsoft yahei'; }
+.picnews .info .m a { color:#0050a2; }
+
+.tabPanel { height:27px; }
+.tabPanel li { float:left; width:89px; height:27px; margin-right:2px; background:url(nico_03.gif) no-repeat; font:bold 12px/27px 'microsoft yahei'; text-align:center; }
+.tabPanel .on { background:url(nico_04.jpg) no-repeat; }
+.tabPanel .on a { color:#fff; }
+
+.service .mt { padding-bottom:23px; }

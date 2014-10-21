@@ -1,0 +1,32 @@
+@charset "utf-8";
+body { background:url(schoolBg.jpg) no-repeat center top #d8f4f7; }
+.banner { height:200px; }
+.babyWrap { width:960px; margin:0 auto; padding:10px 16px; background:#fff; }
+
+.schoolNav { height:50px; padding:0 5px; background:url(schoolNav.jpg) no-repeat; }
+.schoolNav ul { padding-left:10px; }
+.schoolNav ul li { float:left; height:39px; background:url(schoolNavLine.gif) no-repeat right 14px; line-height:39px; }
+.schoolNav ul li a { display:block; padding:0 25px; color:#fff; }
+.schoolNav ul .current { }
+.schoolNav ul .o { float:right; width:180px; background:none; color:#9c9c9c; text-align:center; }
+.schoolNav ul .o a { padding:0; color:#9c9c9c; }
+
+.bodyPic { overflow:hidden; }
+.bodyPic .item { float:left; width:226px; height:268px; margin:0 6px 30px; border:1px solid #e4e4e4; display:inline; }
+.bodyPic .item .pic { width:226px; height:156px; margin-bottom:15px; overflow:hidden; text-align:center; }
+.bodyPic .item .txt { padding:0 9px; color:#999; line-height:22px; }
+.bodyPic .item .txt h3 { color:#333; font-size:16px; font-weight:100; line-height:26px; }
+
+.page { padding-bottom:20px; line-height:20px; text-align:center; }
+.page a { display:inline-block; padding:0 8px; border:1px solid #e6e6e6; }
+.page .current { background:#a1a1a1; color:#fff; }
+
+.tit { height:50px; margin-bottom:20px; }
+
+.baby { margin-bottom:20px; padding:10px; border:1px solid #e6e6e6; overflow:hidden; }
+.baby .left { float:left; width:200px; }
+.baby .right { float:right; width:720px; height:320px; }
+.baby .left .t { height:75px; text-align:center; }
+.baby .left ul { padding:10px 8px; border-bottom:1px solid #ebebeb; }
+.baby .left li { color:#fca019; line-height:26px; }
+.baby .left .info { padding:10px 8px; color:#696969; line-height:26px; }

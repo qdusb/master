@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>{$title}</title>
+<meta content="{$config_keyword}" name="keywords"/>
+<meta content="{$config_description}" name="description"/>
+<link rel="stylesheet" href="__PUBLIC__/images/base.css" />
+<link rel="stylesheet" href="__PUBLIC__/images/{$css_file}" />
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<script src="__PUBLIC__/js/jquery.SuperSlide.js"></script>
+<script src="__PUBLIC__/js/adver.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="topArea">
+			<h2 class="logo"><a href="{:U('Index/index')}">安徽安振产业投资集团有限公司</a></h2>
+			<div class="set">
+				<ul>
+					<li><a href="http://mail.aztzjt.com/" target="_blank">企业邮箱</a>|</li>
+					<li><a href="http://218.22.20.213:2013/" target="_blank">办公OA</a>|</li>
+					<li class="c"><a href="javascript:void(0)">旗下企业</a><span><i>◆</i><a href="#">皖投融资担保公司</a><a href="#">安徽天成投资公司</a><a href="#">安振小额贷款公司</a><a href="#">马鞍山信宜实业公司</a></span></li>
+				</ul>
+			</div>
+			<script>
+			$(function(){
+				$('.set .c').hover(function(){
+					$(this).find('span').show();
+				},function(){
+					$(this).find('span').hide();
+				})
+			})
+			</script>
+			<form class="sForm" name="search" method="get" action="{:U('Advanced/search')}">
+				<div class="sInputBox">
+					<input type="text" name="keyword" value="" placeholder="请输入关键字" x-webkit-speech />
+				</div>
+				<div class="sBtn"><input type="submit" value="搜索" /></div>
+			</form>
+		</div>
+		<div class="nav">
+			<ul class="navs clearfix">
+				<li class="noBg"><a href="{:U('Index/index')}">安振首页</a></li>
+				<foreach name="navs" item="v">
+				<li><a href="{$v.url}" <if condition="$v['id'] eq $id_configs['base_id']">class="current" </if> >{$v.name}</a></li>
+				</foreach>
+			</ul>
+			<div class="subNav">
+				<volist name="categorys" id="v">
+
+					<div class="sub clearfix">
+						<ul>
+							<volist name="v['subNav']" id="t">
+							<li><a href="{$t.url}">{$t.name}</a></li>
+							</volist>
+						</ul>
+
+						<div class="pictxt">
+							<div class="pic"><img src="{$v['baseNav']['pic']}" width="242" height="163"></div>
+							<h2>{$v['baseNav'].en_name}</h2>
+							<p class="info">{$v['baseNav'].content}</p>
+						</div>
+					</div>
+				</volist>
+			</div>
+			<script>
+				$(function(){
+					$(".subNav .sub").each(function(x){
+						$(this).addClass('sub'+ x);
+						var subn = $(this).find('li').length
+						if(subn > 4){
+							$(this).addClass('dbSub');
+						}
+					});
+					$(".navs li").each(function(i){
+						$(this).mousemove(function(){
+							$(".subNav").show();
+							$(".subNav").children().hide();
+							var t = i - 1;
+							$(".sub"+t).show();
+							var tt = $(".sub"+t).find('ul').height();
+							$(".sub"+t).find('ul').css({'margin-top':-(tt-7)/2-20})
+							$(".navs li").removeClass("on");
+							$(this).addClass("on");
+						});
+					});
+					$(".nav").mouseleave(function(){
+						$(".navs li").removeClass("on");
+						$(".subNav").hide();
+						$(".subNav").children().hide();
+					});
+				});
+			</script>
+		</div>
+		<if condition="$css_file eq 'inside.css'">
+		<div class="banner">
+			<img src="{$banner_pic}" width="1600" height="429">
+		</div>
+		<else/>
+		<div class="banner">
+			<div class="bd">
+				<ul>
+					<foreach name="banner_pic" item="v">
+					<li><img src="{$v.pic}" width="1600" height="530"></li>
+					</foreach>
+				</ul>
+			</div>
+			<div class="hd">
+				<ul></ul>
+			</div>
+		</div>
+		<script>jQuery(".banner").slide({titCell:".hd ul",mainCell:".bd ul",effect:"fold",autoPlay:true,autoPage:true,delayTime:700});</script>
+		</if>
+	</div>

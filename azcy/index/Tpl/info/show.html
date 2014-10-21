@@ -1,0 +1,42 @@
+<include file="Public:header"/>
+<script src="__PUBLIC__/js/jquery.SuperSlide.2.1.1.js"></script>
+	<div class="container">
+		<div class="wrap">
+			<div class="sm">
+				<div class="smt">
+					<p>
+						<a href="javascript:history.back(-1)" class="o">返回</a>
+						<foreach name="third_nav" item="v">
+						<a href="{:U('Info/show',array('class_id'=>$v['id']))}" <if condition="$id_configs['class_id'] eq $v['id']">class="current"</if>>{$v.name}</a>
+						</foreach>
+					</p>
+				</div>
+				<div class="smb">
+					<h2>{$id_configs.second_name}</h2>
+					<div class="preview clearfix">
+						<div class="bigImg">
+							<ul>
+								<foreach name="infos" item="v">
+								<li><img src="{$v.pic}" width="710" height="483" /><span>{$v.title}</span></li>
+								</foreach>
+							</ul>
+						</div>
+						<div class="smallScroll">
+							<div class="smallImg">
+								<ul>
+									<foreach name="infos" item="v">
+									<li class="on"><img src="{$v.pic}" width="184" height="123" /><i></i></li>
+									</foreach>
+								</ul>
+							</div><a class="sPrev" href="javascript:void(0)">←</a><a class="sNext" href="javascript:void(0)">→</a>
+						</div>
+					</div>
+					<script>
+						jQuery(".preview").slide({ titCell:".smallImg li", mainCell:".bigImg ul", effect:"fold",delayTime:200});
+						jQuery(".preview .smallScroll").slide({ mainCell:"ul",delayTime:100,vis:3,effect:"top",prevCell:".sPrev",nextCell:".sNext",pnLoop:false });
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+<include file="Public:footer"/>

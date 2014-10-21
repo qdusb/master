@@ -1,0 +1,18 @@
+<div class="hotNews clearfix">
+	<dl>
+		<dt><a href="{$hot.url}">{$hot.title}</a></dt>
+		<dd class="date">{$hot.create_time|strtotime|date="Y.m.d",###}</dd>
+		<dd class="info">{$hot.content|substr=0,200}</dd>
+		<dd class="down"><a href="{$hot.annex}">我要下载</a></dd>
+	</dl>
+</div>
+<div class="list">
+	<ul>
+		<foreach name="infos" item="v">
+			<li <if condition="$v['annex'] neq ''"> class="hover"</if>>
+				<span class="down"><a href="{$v.annex}">我要下载</a></span>
+				<a href="{$v.url}">{$v.title|msubstr=0,40}</a>
+			</li>
+		</foreach>
+	</ul>
+</div>

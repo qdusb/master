@@ -1,0 +1,25 @@
+<p><img src="__PUBLIC__/images/ico_08.jpg" width="710" height="100"></p>
+<table width="100%" align="center" cellspacing="0" cellpadding="0" border="0" class="hrTable">
+	<tr class="hrTableTh">
+		<th align="left">招聘岗位</th>
+		<th width="160">发布时间</th>
+		<th width="100">详情</th>
+	</tr>
+	<foreach name="infos" item="v">
+	<tr class="">
+		<td class="c">{$v.name}（{$v.num}人）</td>
+		<td align="center">{$v.publishdate|strtotime|date="Y.m.d",###}</td>
+		<td align="center"><a href="{:U('HR/displayJob',array('id'=>$v['id']))}" class="p">我要应聘</a></td>
+	</tr>
+	</foreach>
+	
+</table>
+<script>
+$(function(){
+	$(".hrTable tr").hover(function(){
+		$(this).addClass("hover");
+	},function(){
+		$(this).removeClass("hover");
+	});
+})
+</script>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>安徽安振产业投资集团有限公司</title>
+<link rel="stylesheet" href="images/base.css" />
+<link rel="stylesheet" href="images/inside.css" />
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.SuperSlide.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="topArea">
+			<h2 class="logo"><a href="default.html">安徽安振产业投资集团有限公司</a></h2>
+			<p class="set"><a href="#">企业邮箱</a>|<a href="#">办公OA</a>|<a href="#">快速链接</a></p>
+			<form class="sForm" name="search" method="get" action="">
+				<div class="sInputBox"><input type="text" name="search_keyword" value="" placeholder="请输入关键字" x-webkit-speech /></div>
+				<div class="sBtn"><input type="submit" name="" value="搜索" /></div>
+			</form>
+		</div>
+		<div class="nav">
+			<ul class="navs clearfix">
+				<li class="noBg"><a href="default.html">安振首页</a></li>
+				<li><a href="#" class="current">走进安振</a></li>
+				<li><a href="#">旗下企业</a></li>
+				<li><a href="#">产品与服务</a></li>
+				<li><a href="#">新闻中心</a></li>
+				<li><a href="#">人才战略</a></li>
+				<li><a href="#">联系我们</a></li>
+			</ul>
+			<div class="subNav">
+				<div class="sub clearfix">
+					<ul>
+						<li><a href="#">证券投资</a></li>
+						<li><a href="#">实业投资</a></li>
+						<li><a href="#">资产管理</a></li>
+						<li><a href="#">商业银行投资</a></li>
+						<li><a href="#">商业地产投资</a></li>
+						<li><a href="#">证券投资</a></li>
+						<li><a href="#">实业投资</a></li>
+						<li><a href="#">资产管理</a></li>
+						<li><a href="#">商业银行投资</a></li>
+						<li><a href="#">商业地产投资</a></li>
+					</ul>
+					<div class="pictxt">
+						<div class="pic"><img src="images/p242x163.jpg" width="242" height="163"></div>
+						<h2>诚信投资  和谐共存</h2>
+						<p class="info">安徽安振投资有限公司是安徽省国资委直属的国有独资企业，成立于2001年9月，注册资本1.5亿元。公司地处安徽省合肥市庐阳区，经营范围：实业及项目投资，资产管理，财务顾问，投资咨询等。</p>
+					</div>
+				</div>
+				<div class="sub clearfix">
+					<ul>
+						<li><a href="#">证券投资</a></li>
+						<li><a href="#">实业投资</a></li>
+						<li><a href="#">资产管理</a></li>
+						<li><a href="#">商业银行投资</a></li>
+					</ul>
+					<div class="pictxt">
+						<div class="pic"><img src="images/p242x163.jpg" width="242" height="163"></div>
+						<h2>诚信投资  和谐共存</h2>
+						<p class="info">安徽安振投资有限公司是安徽省国资委直属的国有独资企业，成立于2001年9月，注册资本1.5亿元。公司地处安徽省合肥市庐阳区，经营范围：实业及项目投资，资产管理，财务顾问，投资咨询等。</p>
+					</div>
+				</div>
+			</div>
+			<script>
+				$(function(){
+					$(".subNav .sub").each(function(x){
+						$(this).addClass('sub'+ x);
+						var subn = $(this).find('li').length
+						if(subn > 4){
+							$(this).addClass('dbSub');
+						}
+					});
+					$(".navs li").each(function(i){
+						$(this).mousemove(function(){
+							$(".subNav").show();
+							$(".subNav").children().hide();
+							var t = i - 1;
+							$(".sub"+t).show();
+							$(".navs li").removeClass("on");
+							$(this).addClass("on");
+						});
+					});
+					$(".nav").mouseleave(function(){
+						$(".navs li").removeClass("on");
+						$(".subNav").hide();
+						$(".subNav").children().hide();
+					});
+				});
+			</script>
+		</div>
+		<div class="banner"><img src="images/banner_about.jpg" width="1600" height="429"></div>
+	</div>
+	<div class="container">
+		<div class="wrap clearfix">
+			<div class="sidebar">
+				<h2 class="leftTxtTitle">走进安振</h2>
+				<div class="menu">
+					<dl>
+						<dt><a href="#" class="current">集团简介</a></dt>
+						<dt><a href="#">集团文化</a></dt>
+						<dt><a href="#">董事长致辞</a></dt>
+						<dt><a href="#">组织架构</a></dt>
+					</dl>
+				</div>
+				<ul class="leftPic">
+					<li><a href="#"><img src="images/leftPic_01.jpg" width="205" height="70" alt="联系我们" /></a></li>
+				</ul>
+			</div>
+			<div class="main">
+				<div class="location clearfix">
+					<h2>企业文化</h2>
+					<div class="breadcrumbs"><a href="#">首页</a> &gt; <a href="#">走进安振</a> &gt; <a href="#" class="current">集团文化</a></div>
+				</div>
+				<div class="message">
+					<dl class="message-list">
+						<dt class="m-title">留言者:张先生</dt>
+						<dd class="m-info">我在合肥有一家实体经营的公司，发展较顺利，但是目前资金周转有些困难，请问能否在你们家进行小额贷款？如果可以，办理流程是怎样的？需要准备那些材料？</dd>
+						<dt class="r-title">回复：</dt>
+						<dd class="r-info">
+							<p>您好，你可以拨打我司小额贷款客服电话400-666-8888或来我司详细咨询，我司将有专业的客户经理跟您沟通，了解您的资金需求，并根据您的实际情况给予您专业的财务建议。如果您的条件符合我司的业务标准，我司业务人员会在3-5个工作日为您解决您的资金要求。我司受理业务流程详见http://php.ibw.cn/。办理业务需要准备贵公司的基本资料（如营业执照、组织机构代码证、税务登记证、公司简介等材料）及与经营相关的资料（如产品介绍、财务报表、纳税申报表等材料）</p>
+						</dd>
+					</dl>
+					<dl class="message-list">
+						<dt class="m-title">留言者:张先生</dt>
+						<dd class="m-info">我在合肥有一家实体经营的公司，发展较顺利，但是目前资金周转有些困难，请问能否在你们家进行小额贷款？如果可以，办理流程是怎样的？需要准备那些材料？</dd>
+						<dt class="r-title">回复：</dt>
+						<dd class="r-info">
+							<p>您好，你可以拨打我司小额贷款客服电话400-666-8888或来我司详细咨询，我司将有专业的客户经理跟您沟通，了解您的资金需求，并根据您的实际情况给予您专业的财务建议。如果您的条件符合我司的业务标准，我司业务人员会在3-5个工作日为您解决您的资金要求。我司受理业务流程详见http://php.ibw.cn/。办理业务需要准备贵公司的基本资料（如营业执照、组织机构代码证、税务登记证、公司简介等材料）及与经营相关的资料（如产品介绍、财务报表、纳税申报表等材料）</p>
+						</dd>
+					</dl>
+				</div>
+				<div class="page"><a href="#">首页</a><a href="#">上一页</a><a href="#" class="current">1</a><a href="#">2</a><a href="#">下一页</a><a href="#">尾页</a></div>
+				<div class="form-panel">
+					<h4>发送留言</h4>
+					<h6>请注意：带有 <span>*</span> 的项目必须填写！</h6>
+					<div class="tips">留言成功，我们稍后将处理您的留言！</div>
+					<form action="" name="form_message" method="post">
+						<ul>
+							<li class="field">
+								<div class="input">
+									<label>姓名：</label>
+									<input name="name" type="text" size="20" maxlength="50" class="text" /> <span class="red">*</span>
+								</div>
+							</li>
+							<li class="field">
+								<div class="input">
+									<label>电话：</label>
+									<input name="phone" type="text" size="20" maxlength="50" class="text" />
+								</div>
+							</li>
+							<li class="field">
+								<div class="input">
+									<label>邮箱：</label>
+									<input name="email" type="text" size="40" maxlength="50" class="text" />
+								</div>
+							</li>
+							<li class="field">
+								<div class="input">
+									<label>留言：</label>
+									<textarea name="content" cols="60" rows="6" class="textarea"></textarea> <span class="red">*</span>
+								</div>
+							</li>
+							<li class="submit-field">
+								<div class="input clearfix"><input type="submit" value="提交" class="btn-submit" /><input type="reset" value="重置" class="btn-reset" /></div>
+							</li>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="wrapBt"></div>
+	</div>
+	<div class="footer">
+		<div class="copy clearfix">
+			<div class="fl">
+				<p class="ftNav"><a href="#">关于我们</a>|<a href="#">资讯中心</a>|<a href="#">下载中心</a>|<a href="#">联系我们</a></p>
+				<p>&copy; copyright 2014 版权所有 安徽安振投资产业集团 <a href="#">皖ICP11010574号</a></p>
+				<p>技术支持：<a href="#">网新科技</a></p>
+			</div>
+			<div class="fr">
+				<ul>
+					<li>分享：</li>
+					<li>分享：</li>
+					<li><a href="#">理财咨询<i><img src="images/p90x90.jpg" width="90" height="90"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--[if lte IE 6]><script src="js/iepng.js"></script><![endif]-->
+</body>
+</html>

@@ -1,0 +1,15 @@
+<div class="w170">
+	<div class="pic-item-list clearfix">
+		<volist name="infos" id="v">
+		<div class="pic-item">
+			<div class="list-pic"><a href="{$v.url}"><img src="{$v.pic}" width="170" height="180" /></a></div>
+			<dl>
+				<dd><a href="{$v.url}">{$v.title|msubstr=0,13}</a></dd>
+			</dl>
+		</div>
+		<if condition="($i-1)%4 eq 3">
+		<div class="clear"></div>
+		</if>
+	</volist>
+	</div>
+</div>

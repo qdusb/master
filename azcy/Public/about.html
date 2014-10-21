@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>安徽安振产业投资集团有限公司</title>
+<link rel="stylesheet" href="images/base.css" />
+<link rel="stylesheet" href="images/inside.css" />
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.SuperSlide.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="topArea">
+			<h2 class="logo"><a href="default.html">安徽安振产业投资集团有限公司</a></h2>
+			<p class="set"><a href="#">企业邮箱</a>|<a href="#">办公OA</a>|<a href="#">快速链接</a></p>
+			<form class="sForm" name="search" method="get" action="">
+				<div class="sInputBox"><input type="text" name="search_keyword" value="" placeholder="请输入关键字" x-webkit-speech /></div>
+				<div class="sBtn"><input type="submit" name="" value="搜索" /></div>
+			</form>
+		</div>
+		<div class="nav">
+			<ul class="navs clearfix">
+				<li class="noBg"><a href="default.html">安振首页</a></li>
+				<li><a href="#" class="current">走进安振</a></li>
+				<li><a href="#">旗下企业</a></li>
+				<li><a href="#">产品与服务</a></li>
+				<li><a href="#">新闻中心</a></li>
+				<li><a href="#">人才战略</a></li>
+				<li><a href="#">联系我们</a></li>
+			</ul>
+			<div class="subNav">
+				<div class="sub clearfix">
+					<ul>
+						<li><a href="#">证券投资</a></li>
+						<li><a href="#">实业投资</a></li>
+						<li><a href="#">资产管理</a></li>
+						<li><a href="#">商业银行投资</a></li>
+						<li><a href="#">商业地产投资</a></li>
+						<li><a href="#">证券投资</a></li>
+						<li><a href="#">实业投资</a></li>
+						<li><a href="#">资产管理</a></li>
+						<li><a href="#">商业银行投资</a></li>
+						<li><a href="#">商业地产投资</a></li>
+					</ul>
+					<div class="pictxt">
+						<div class="pic"><img src="images/p242x163.jpg" width="242" height="163"></div>
+						<h2>诚信投资  和谐共存</h2>
+						<p class="info">安徽安振投资有限公司是安徽省国资委直属的国有独资企业，成立于2001年9月，注册资本1.5亿元。公司地处安徽省合肥市庐阳区，经营范围：实业及项目投资，资产管理，财务顾问，投资咨询等。</p>
+					</div>
+				</div>
+				<div class="sub clearfix">
+					<ul>
+						<li><a href="#">证券投资</a></li>
+						<li><a href="#">实业投资</a></li>
+						<li><a href="#">资产管理</a></li>
+						<li><a href="#">商业银行投资</a></li>
+					</ul>
+					<div class="pictxt">
+						<div class="pic"><img src="images/p242x163.jpg" width="242" height="163"></div>
+						<h2>诚信投资  和谐共存</h2>
+						<p class="info">安徽安振投资有限公司是安徽省国资委直属的国有独资企业，成立于2001年9月，注册资本1.5亿元。公司地处安徽省合肥市庐阳区，经营范围：实业及项目投资，资产管理，财务顾问，投资咨询等。</p>
+					</div>
+				</div>
+			</div>
+			<script>
+				$(function(){
+					$(".subNav .sub").each(function(x){
+						$(this).addClass('sub'+ x);
+						var subn = $(this).find('li').length
+						if(subn > 4){
+							$(this).addClass('dbSub');
+						}
+					});
+					$(".navs li").each(function(i){
+						$(this).mousemove(function(){
+							$(".subNav").show();
+							$(".subNav").children().hide();
+							var t = i - 1;
+							$(".sub"+t).show();
+							$(".navs li").removeClass("on");
+							$(this).addClass("on");
+						});
+					});
+					$(".nav").mouseleave(function(){
+						$(".navs li").removeClass("on");
+						$(".subNav").hide();
+						$(".subNav").children().hide();
+					});
+				});
+			</script>
+		</div>
+		<div class="banner"><img src="images/banner_about.jpg" width="1600" height="429"></div>
+	</div>
+	<div class="container">
+		<div class="wrap clearfix">
+			<div class="sidebar">
+				<h2 class="leftTxtTitle">走进安振</h2>
+				<div class="menu">
+					<dl>
+						<dt><a href="#" class="current">集团简介</a></dt>
+						<dt><a href="#">集团文化</a></dt>
+						<dt><a href="#">董事长致辞</a></dt>
+						<dt><a href="#">组织架构</a></dt>
+					</dl>
+				</div>
+				<ul class="leftPic">
+					<li><a href="#"><img src="images/leftPic_01.jpg" width="205" height="70" alt="联系我们" /></a></li>
+				</ul>
+			</div>
+			<div class="main">
+				<div class="location clearfix">
+					<h2>企业文化</h2>
+					<div class="breadcrumbs"><a href="#">首页</a> &gt; <a href="#">走进安振</a> &gt; <a href="#" class="current">集团文化</a></div>
+				</div>
+				<div class="article">
+					<div class="hd">
+						<h1>微软展示Windows 8新LOGO：偏向Metro风格</h1>
+						<p class="titBar">发布时间：2013-12-24 16:52:48 来源：安徽铸造网 分享：</p>
+					</div>
+					<div class="bd">
+						<p style="TEXT-INDENT: 2em">公布了即将推出的Windows8新标志，新标志大量依赖Metro用户界面，呈现出清新的单色设计。新标志有点像反过来的芬兰国旗，以蓝色为背景，中间为白十字，看起来像一个窗口。</p>
+						<p style="TEXT-INDENT: 2em">窗口有些倾斜角度。Windows用户体验首席主管萨姆·莫罗（Sam Moreau）称，这是为了带来一种与"整个Windows 8系统快速和流动风格一致的"动感。微软聘请了权威设计顾问公司Pentagram来设计。莫罗称，公司希望与以前的Windows标志不同，以前的标志看上去更像是旗帜而非窗口。</p>
+						<p style="TEXT-INDENT: 2em">莫罗在博客中写到："窗口确实是计算的一个美丽隐喻，我们希望通过新标志来表达脑海中的窗口印象"。有点讽刺意味的是，Metro界面已不再有窗口的隐含意思，而窗口一直是该操作系统的核心含义。触控友好的Metro风格是通过平铺的方块而非图标访问应用软件，其设计让人有身临其境之感。在Metro模式下，Windows8的程序运行时占据了整个电脑屏幕。</p>
+						<p style="TEXT-INDENT: 2em">微软没有透露何是推出新操作系统，但多数分析师认为，可能在今年年底前发布，或许会赶在返校季节前。本月末微软将推出beta测试版本，这是正式发布道路上的一个里程碑。</p>
+						<p style="TEXT-INDENT: 2em">公布了即将推出的Windows8新标志，新标志大量依赖Metro用户界面，呈现出清新的单色设计。新标志有点像反过来的芬兰国旗，以蓝色为背景，中间为白十字，看起来像一个窗口。</p>
+						<p style="TEXT-INDENT: 2em">窗口有些倾斜角度。Windows用户体验首席主管萨姆·莫罗（Sam Moreau）称，这是为了带来一种与"整个Windows 8系统快速和流动风格一致的"动感。微软聘请了权威设计顾问公司Pentagram来设计。莫罗称，公司希望与以前的Windows标志不同，以前的标志看上去更像是旗帜而非窗口。</p>
+						<p style="TEXT-INDENT: 2em">莫罗在博客中写到："窗口确实是计算的一个美丽隐喻，我们希望通过新标志来表达脑海中的窗口印象"。有点讽刺意味的是，Metro界面已不再有窗口的隐含意思，而窗口一直是该操作系统的核心含义。触控友好的Metro风格是通过平铺的方块而非图标访问应用软件，其设计让人有身临其境之感。在Metro模式下，Windows8的程序运行时占据了整个电脑屏幕。</p>
+						<p style="TEXT-INDENT: 2em">微软没有透露何是推出新操作系统，但多数分析师认为，可能在今年年底前发布，或许会赶在返校季节前。本月末微软将推出beta测试版本，这是正式发布道路上的一个里程碑。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapBt"></div>
+	</div>
+	<div class="footer">
+		<div class="copy clearfix">
+			<div class="fl">
+				<p class="ftNav"><a href="#">关于我们</a>|<a href="#">资讯中心</a>|<a href="#">下载中心</a>|<a href="#">联系我们</a></p>
+				<p>&copy; copyright 2014 版权所有 安徽安振投资产业集团 <a href="#">皖ICP11010574号</a></p>
+				<p>技术支持：<a href="#">网新科技</a></p>
+			</div>
+			<div class="fr">
+				<ul>
+					<li>分享：</li>
+					<li>分享：</li>
+					<li><a href="#">理财咨询<i><img src="images/p90x90.jpg" width="90" height="90"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--[if lte IE 6]><script src="js/iepng.js"></script><![endif]-->
+</body>
+</html>

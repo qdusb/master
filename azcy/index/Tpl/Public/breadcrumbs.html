@@ -1,0 +1,13 @@
+<div class="location clearfix">
+	<h2>{$id_configs.class_name}</h2>
+	<div class="breadcrumbs">
+		<a href="{:U('Index/index')}">首页</a> 
+		&gt; <a href="{:U('Info/index',array('class_id'=>$id_configs['second_id']))}">{$id_configs.second_name}</a>
+		<if condition="$id_configs.third_id neq ''">
+		&gt; <a href="{:U('Info/index',array('class_id'=>$id_configs['third_id']))}">{$id_configs.third_name}</a>
+		</if>
+	</div>
+</div>
+<script>
+$(".breadcrumbs a:last").addClass("current");
+</script>

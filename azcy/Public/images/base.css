@@ -1,0 +1,65 @@
+@charset "utf-8";
+/*
+ibw.cn Reset Stylesheet
+v2.4
+Author: Carter
+Last Updated: 2014-06-11
+*/
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol{margin:0;padding:0}em,i{font-style:normal}li{list-style:none}a,a:hover{text-decoration:none}img{border:0}table{border-collapse:collapse;border-spacing:0}label{cursor:default}body,button,input,select,textarea{font:12px/1.5 Tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,'microsoft yahei'}textarea{resize:none}a,a:focus{outline:none}.clearfix:after{content:'\20';display:block;height:0;clear:both}.clearfix{*zoom:1}.clear{display:block;height:0;clear:both;font-size:0;line-height:0;overflow:hidden}.fl{float:left;display:inline}.fr{float:right;display:inline}.fn{float:none}.tl{text-align:left}.tr{text-align:right}.tc{text-align:center}.hide{display:none}.show{display:block}.mt10{margin-top:10px}.noBg{background:none!important}.noBorder{border:0!important}.yahei{font-family:'microsoft yahei'}.red{color:red}
+	/* 项目主体部分设置 */
+body{background:#fff;color:#333;}
+a{color:#333;text-decoration:none;/*transition:color 0.2s linear 0s*/}
+a:hover{color:#000;}
+/* 容器 */
+.wrapper { position:relative; width:100%; min-width:1000px; height:100%; overflow:hidden; }
+.header { width:100%; }
+.topArea { position:relative; width:1002px; height:77px; margin:0 auto; z-index:3; }
+.logo { float:left; width:240px; height:77px; background:url(logo.png) no-repeat; overflow:hidden; }
+.logo a { display:block; width:240px; height:77px; padding-top:77px; }
+.sForm { position:absolute; top:27px; right:0; display:block; width:168px; height:24px; border:1px solid #dadada; background:#fff; line-height:18px; }
+.sForm div, .sForm input { float:left; }
+.sForm .sInputBox { position:relative; width:136px; height:24px; background:#fff; overflow:hidden; }
+.sForm .sInputBox input { width:128px; height:18px; padding:4px; border:none; background:none; color:#333; font-family:arial; line-height:16px; }
+.sForm .sBtn { width:32px; height:24px; background:url(sBtn.gif) no-repeat; overflow:hidden; }
+.sForm .sBtn input { width:32px; height:24px; border:none; background:none; color:#fff; font-size:0; line-height:999px; overflow:hidden; cursor:pointer; }
+.set { position:absolute; top:27px; right:182px; color:#626262; z-index:99; }
+.set ul li { position:relative; float:left; color:#626262; font:12px/26px "microsoft yahei"; }
+.set ul li a { margin:0 8px; color:#626262; }
+.set ul li span { position:absolute; top:31px; left:50%; display:none; width:130px; margin-left:-71px; padding:10px 5px; border-radius:3px; border:1px solid #dadada; background:#fff; font:12px/24px arial; text-align:center; }
+.set ul li span a { display:block; margin:0; }
+.set ul li span a:hover { color:#0050a2; }
+.set ul li span i { position:absolute; top:-12px; left:60px; display:block; width:15px; height:15px; font-size:20px; font-family:'\5b8b\4f53'; color:#fff; }
+/* 导航区域 */
+.nav { position:relative; width:1000px; height:38px; margin:0 auto; background:url(nav.gif) no-repeat; z-index:2; }
+.navs { height:38px; }
+.navs li { position:relative; float:left; width:125px; height:38px; background:url(navLine.gif) no-repeat 0 center; font:bold 14px/38px "microsoft yahei"; z-index:99; text-align:center; }
+.navs li a { display:block; height:38px; color:#404040; }
+.navs li a:hover,.navs li .current { background:url(navCur.jpg) no-repeat center top; color:#fff; }
+	/* 下拉菜单 */
+.subNav { position:absolute; top:38px; left:50%; width:1000px; margin-left:-500px; z-index:99; }
+.nav .sub { position:relative; width:804px; height:198px; margin:0 auto; padding:30px 56px 0 140px; background:url(subNav.gif); color:#333; display:none; }
+.nav .sub ul { position:relative; top:50%; float:left; width:149px; height:auto; padding:0; overflow:hidden; }
+.nav .sub ul li { float:left; width:137px; height:auto; margin:0 10px 7px 0; border:1px solid #dadada; color:#252525; font:bold 12px/23px 'microsoft yahei'; }
+.nav .sub ul li a { display:block; height:auto; padding:0; background:url(subNavli.gif); color:#515151; text-align:center; }
+.nav .sub ul li a:hover { border:0; background:url(subNavCur.jpg) repeat; color:#fff; }
+.nav .sub .pictxt { float:right; position:relative; width:290px; height:163px; padding:0 0 0 275px; }
+.nav .sub .pictxt .pic { position:absolute; top:0; left:0; width:242px; height:163px; }
+.nav .sub .pictxt h2 { margin-bottom:8px; color:#353535; font:23px/38px 'microsoft yahei'; text-align:center; }
+.nav .sub .pictxt .info { color:#7b7874; line-height:22px; text-indent:2em; }
+.nav .dbSub { width:904px; padding-left:40px; }
+.nav .dbSub ul { width:298px; }
+.container { position:relative; background:url(container.jpg) repeat-x; z-index:1; }
+.wrap { position:relative; top:-52px; width:956px; min-height:400px; _height:400px; margin:0 auto 0; padding:23px 33px 23px 33px; background:url(wrap.png) no-repeat; z-index:9; }
+/* 底部 */
+.footer { position:relative; padding:15px 0; background:#ececec; color:#6a6a6a; line-height:18px; z-index:9; }
+.footer a,.footer a:hover { color:#6a6a6a; }
+.copy { width:1002px; margin:0 auto; }
+.ftNav { margin:0 0 5px -8px; color:#6a6a6a; }
+.ftNav a { margin:0 8px; color:#292929; }
+.copy .fr { height:25px; }
+.copy .fr ul { float:right; height:25px; }
+.copy .fr ul li { position:relative; float:left; margin-left:5px; line-height:23px; display:inline; }
+.copy .fr ul .weixin a { display:block; width:67px; height:25px; padding-left:37px; background:url(ico_01.gif) no-repeat; color:#fff; }
+.copy .fr ul .weixin a i { position:absolute; bottom:25px; left:0; width:90px; height:90px; padding:5px 5px 11px; background:url(ico_02.gif) no-repeat; display:none; }
+.copy .fr ul .weixin a:hover i { display:block; }
+.jiathis_style { padding-top:5px; }

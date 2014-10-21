@@ -1,0 +1,76 @@
+<include file="Public:header"/>
+	<div class="container">
+		<div class="wrap">
+			<div class="gird-s501m501 clearfix">
+				<div class="sidebar">
+					<div class="title news">
+						<div class="hd">
+							<h2>新闻中心</h2>
+							<p class="more"><a href="{:U('Info/index?class_id=104101')}">MORE</a></p>
+						</div>
+						<div class="bd">
+							<div class="hotNews">
+								<p class="pic"><img src="{$hot.pic}" width="141" height="141"></p>
+								<div class="info">
+									<h3><a href="{$hot.url}">{$hot.title|msubstr=0,17}</a></h3>
+									<p class="d">{$hot.create_time|strtotime|date="Y-m-d",###}</p>
+									<p class="i">{$hot.content|strip_tags|msubstr=0,90}</p>
+									<p class="m"><a href="{$hot.url}">了解更多&gt;&gt;</a></p>
+								</div>
+							</div>
+							<ul class="list">
+								<foreach name="comNews" item="v">
+								<li><span>{$v.create_time|strtotime|date="Y-m-d",###}</span><a href="{:U('Display/index',array('id'=>$v['id']))}">{$v.title|msubstr=0,30}</a></li>
+								</foreach>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title service">
+						<div class="hd">
+							<h2>产品与服务</h2>
+							<p class="more"><a href="{:U('Info/index?class_id=103101')}">MORE</a></p>
+						</div>
+						<div class="bd">
+							<div class="mt">
+								<ul class="tabPanel clearfix">
+									<foreach name="psclass" item="v">
+									<li <if condition="$key eq 0">class="on"</if>><a href="#">{$v.name}</a></li>
+									</foreach>
+								</ul>
+							</div>
+							<div class="mc tab-bd">
+								<foreach name="psclass" item="v">
+								<div class="picnews clearfix">
+									<p class="pic"><img src="{$v['info'].pic}" width="169" height="169"></p>
+									<div class="info">
+										<h3><a href="#">{$v['info'].title}</a></h3>
+										<p class="i">{$v['info'].content|strip_tags|msubstr=0,100}</p>
+										<p class="m"><a href="{$v['info'].url}">了解更多&gt;&gt;</a></p>
+									</div>
+								</div>
+								</foreach>
+							</div>
+
+						</div>
+					</div>
+					<script>jQuery(".service").slide({ titCell:".mt .tabPanel li", mainCell:".tab-bd",delayTime:0 });</script>
+				</div>
+			</div>
+			<div class="title partner">
+				<div class="hd">
+					<h2>合作伙伴</h2>
+				</div>
+				<div class="bd">
+					<ul class="clearfix">
+						<foreach name="links" item="v">
+						<li><a href="{$v.url}" target="_blank"><img src="{$v.pic}" width="153" height="46"></a></li>
+						</foreach>
+					</ul>
+				</div>
+			</div>
+			<script>jQuery(".partner").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:6,interTime:25,trigger:"click"});</script>
+		</div>
+	</div>
+	<include file="Public:footer"/>

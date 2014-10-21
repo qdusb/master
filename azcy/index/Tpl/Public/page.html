@@ -1,0 +1,9 @@
+<div class="page">
+	<a href="{$page_config.home}">首页</a>
+	<a href="{$page_config.prev}">上一页</a>
+	<volist name="page_config['page']" id="v">
+		<a href="{$v.url}" <if condition="$v['page'] eq $page_config['page_id']">class="current"</if>>{$v.label}</a>
+	</volist>
+	<a href="{$page_config.next}">下一页</a>
+	<a href="{$page_config.end}">尾页</a>
+</div>

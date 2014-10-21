@@ -1,0 +1,25 @@
+@charset "utf-8";
+body { background:url(loginBg.jpg) no-repeat center top #c7e4f2; }
+.header { width:950px; height:60px; margin:0 auto; }
+.header h2 { padding-left:13px; font-weight:100; font-size:26px; line-height:60px; }
+.loginArea { width:950px; height:515px; margin:0 auto; background:url(login.jpg) no-repeat; }
+.copyright { padding-top:0; border:0; background:none; }
+
+.loginArea .left { float:left; width:224px; height:457px; padding:22px 20px; border-right:1px solid #ededed; }
+.loginArea .right { float:right; width:685px; }
+
+.loginForm { padding:140px 0 0 170px; }
+.loginForm td { padding:10px 5px; line-height:24px; }
+.loginForm .text { width:180px; padding:5px; border:1px solid #c7c7c7; }
+.loginForm .submit { width:94px; height:37px; border:0; background:url(btn_01.jpg) no-repeat; cursor:pointer; }
+.loginForm .tit { font-size:14px; }
+.loginForm .y { color:#f95e00; }
+
+.reg-top { height:30px; padding:30px 30px 0; color:#999; font-size:14px; line-height:30px; }
+.reg-top span { float:right; font-size:12px; }
+.reg-top span a { color:#15a9ce; }
+.regForm { padding:30px 0 0 10px; }
+.regForm td { padding:10px 5px; color:#999; line-height:24px; }
+.regForm .tit { color:#333; font-size:14px; }
+.regForm .text { width:270px; padding:5px; border:1px solid #c7c7c7; }
+.regForm .submit { width:126px; height:36px; border:0; background:url(btn_02.jpg) no-repeat; cursor:pointer; }

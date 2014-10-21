@@ -1,0 +1,13 @@
+<div class="sidebar">
+	<h2 class="leftTxtTitle">{$id_configs.base_name}</h2>
+	<div class="menu">
+		<dl>
+			<volist name="seconds" id="v">
+				<dt><a href="{$v.second.url}" <if condition="$v['second']['id'] eq $id_configs['second_id']">class="current"</if>>{$v.second.name}</a></dt>
+			</volist>
+		</dl>
+	</div>
+	<ul class="leftPic">
+		<li><a href="{:U('Advanced/contact')}"><img src="__PUBLIC__/images/leftPic_01.jpg" width="205" height="70" alt="联系我们" /></a></li>
+	</ul>
+</div>

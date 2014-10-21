@@ -1,0 +1,91 @@
+<include file="Public:header"/>
+	<div class="container">
+		<div class="wrap clearfix">
+			<include file="Public:left"/>
+			<div class="main">
+				<include file="Public:breadcrumbs"/>
+				<div class="message">
+					<foreach name="infos" item="v">
+					<dl class="message-list">
+						<dt class="m-title">留言者:{$v.name}</dt>
+						<dd class="m-info">{$v.content}</dd>
+						<dt class="r-title">回复：</dt>
+						<dd class="r-info">
+							<p>{$v.reply}</p>
+						</dd>
+					</dl>
+					</foreach>
+				</div>
+				<include file="Public:page"/>
+				<div class="form-panel">
+					<h4>发送留言</h4>
+					<h6>请注意：带有 <span>*</span> 的项目必须填写！</h6>
+					<div class="tips">请认真填写您的留言信息！</div>
+					<form action="" name="form_message" method="post" id="form_message">
+						<ul>
+							<li class="field">
+								<div class="input">
+									<label>姓名：</label>
+									<input name="name" type="text" size="20" maxlength="50" class="text" /> <span class="red">*</span>
+								</div>
+							</li>
+							<li class="field">
+								<div class="input">
+									<label>电话：</label>
+									<input name="phone" type="text" size="20" maxlength="50" class="text" />
+								</div>
+							</li>
+							<li class="field">
+								<div class="input">
+									<label>邮箱：</label>
+									<input name="email" type="text" size="40" maxlength="50" class="text" />
+								</div>
+							</li>
+							<li class="field">
+								<div class="input">
+									<label>留言：</label>
+									<textarea name="content" cols="60" rows="6" class="textarea"></textarea> <span class="red">*</span>
+								</div>
+							</li>
+							<li class="submit-field">
+								<div class="input clearfix">
+									<input type="button" value="提交" id="btn-submit" class="btn-submit" />
+									<input type="reset" value="重置" class="btn-reset" /></div>
+							</li>
+						</ul>
+					</form>
+					<script type="text/javascript">
+					var url="{:U('Advanced/submitMessage')}";
+					$(function(){
+						$(".btn-submit").click(function(){
+							var name=$("input[name='name']").val();
+							var phone=$("input[name='phone']").val();
+							var email=$("input[name='email']").val();
+							var content=$("textarea[name='content']").val();
+
+							if(name==""||content==""){
+								alert("留言人和留言内容不能为空");
+								return;
+							}
+							else{
+								var data={"name":name,"phone":phone,"email":email,"content":content};
+								$.ajax({type:'POST',url:url,data:data,success:function (data,textStatus){
+										var obj=eval("("+data+")");
+										if(obj.returnInfo=="ok"){
+											alert("留言成功，我们将尽快予以查看,谢谢！");
+											document.form_message.reset();
+										}else{
+											alert(obj.returnInfo);
+										}
+
+										this;}});
+							}
+						});
+					});
+					</script>
+				</div>
+			</div>
+		</div>
+		<div class="wrapBt"></div>
+	</div>
+<include file="Public:footer"/>

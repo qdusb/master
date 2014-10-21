@@ -1,0 +1,9 @@
+<div class="list">
+	<ul>
+		<foreach name="infos" item="v">
+		<li><span>{$v.create_time|strtotime|date="Y-m-d",###}</span>
+			<a href="{:U('Display/index',array('id'=>$v['id']))}">{$v.title|msubstr=0,40}</a>
+		</li>
+		</foreach>
+	</ul>
+</div>
