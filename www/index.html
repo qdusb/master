@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>安徽网新手机站</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta id="Keywords" name="Keywords" content="安徽网新手机站" />
+<meta content="width=device-width,user-scalable=no" name="viewport">
+<meta id="Description" name="Description" content="安徽网新手机站" />
+<link id="css" href="images/web.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.touchSlider.js"></script>
+<script type="text/javascript" src="phonegap.js"></script>
+<script type="text/javascript" src="scripts/baiduTemplate.js"></script>
+<script type="text/javascript" src="scripts/BaiduMap.js"></script>
+<script type="text/javascript" src="scripts/IBW.js"></script>
+
+</head>
+<body bgcolor="#FFFFFF">
+
+<script id="subviewports" type="text/html">
+	<div class="viewports" id="<%=id%>" style="display:none">
+		<div class="catelogo">
+			<dl class="menu">
+				<dt><%=title%></dt>
+				<% for(var k in menus){ %> 
+				<dd id="<%=k%>" onClick="getWebData(this,'<%=k%>')"><a href="javascript:"><%=menus[k]%></a></dd>
+				<% } %>
+			</dl>
+		</div>
+		<div class="context display_article dd article-dd"><%=content%></div>
+	</div>
+</script>
+
+<script id="display" type="text/html">
+	<div class="context">
+	<div class="randbox">
+		<div class="hd article-hd">
+			<h3 class="title"><%=title%></h3>
+			<ul class="sm-message">
+				<li>发表日期：<%=date%>&nbsp;&nbsp;已有<%=views%>人浏览</li>
+			</ul>
+		</div>
+		<div class="context display_article dd article-dd">
+		<%=content%>
+		</div>
+	</div>
+	<ul class="nav">
+		<li><a href="javascript:showDisplay(<%=prevID%>)">上一条</a></li>
+		<li><a href="javascript:showDisplay(<%=nextID%>)">下一条</a></li>
+	</ul>
+	</div>
+</script>
+<header class="caption">
+<div class="logo hidetext">安徽网新手机站</div>
+<aside class="show_more">
+  <div class="icon_more pointer">&nbsp;</div>
+</aside>
+</header>
+<div class="viewports"> 
+	<div id="mainweb">
+		<ul class="nav_box mb clearfix">
+	<li>
+	<a href="javascript:gotoWeb('#about')" data-ajax="true"><img src="images/nav_box_about.png" /></a>
+	<p>关于网新</p>
+	</li>
+	<li>
+	<a href="javascript:gotoWeb('#news')"><img src="images/nav_box_news.png" /></a>
+	<p>企业动态</p>
+	</li>
+	<li>
+	<a href="javascript:gotoWeb('#solution')"><img src="images/nav_box_scheme.png" /></a>
+	<p>解决方案</p>
+	</li>
+	<li>
+	<a href="javascript:gotoWeb('#case')"><img src="images/nav_box_case.png" /></a>
+	<p>案例展示</p>
+	</li>
+	<li>
+	<a href="javascript:gotoWeb('#web')"><img src="images/nav_box_web.png" /></a>
+	<p class="blue">网站建设</p>
+	</li>
+	<li>
+	<a href="javascript:gotoWeb('#baidu')"><img src="images/nav_box_baidu.png" /></a>
+	<p class="blue">百度推广</p>
+	</li>
+	<li>
+	<a href="javascript:gotoWeb('#phone')"><img src="images/nav_box_mobile.png" /></a>
+	<p class="blue">手机网站</p>
+	</li>
+	<li>
+	<a href="javascript:gotoWeb('#moreProduct')"><img src="images/nav_box_more.png" /></a>
+	<p>更多产品</p>
+	</li>
+	<li>
+	<a href="javascript:gotoWeb('#message')"><img src="images/nav_box_ask.png" /></a>
+	<p>在线咨询</p>
+	</li>
+
+	<li>
+	<a href="javascript:gotoWeb('#hr')"><img src="images/nav_box_job.png" /></a>
+	<p>人才招聘</p>
+	</li>
+	<li>
+	<a href="javascript:gotoWeb('#contact')"><img src="images/nav_box_contact.png" /></a>
+	<p>联系信息</p>
+	</li>
+	<li>
+	<a href="javascript:showMap('','','安徽网新')"><img src="images/nav_box_sina.png" /></a>
+	<p>公司地址</p>
+	</li>
+	</ul>
+		<div class="mainviewports">
+			<!--企业动态-->
+			<div class="box mb"><div class="bd box_shadow pd" id="mnews"></div></div>
+			<!--产品与服务-->
+			<div class="box mb"><div id="product" class="slideBox"></div></div>
+			<!--成功案例-->
+			<div class="box mb"><div id="success" class="slideBox"></div></div>
+			<!--我们的优势-->
+			<div class="box mb"><div class="bd box_shadow pd" id="ourAdvantage"></div></div>
+			<!--企业信息-->
+			<div class="box mb"><div class="bd box_shadow pd" id="info_head"></div></div>
+	</div>
+	</div>
+	<!--底部动态获取-->
+	<div id="subweb"></div>
+	
+	<div class="context display_article dd article-dd" id="baidumapweb" style="display:none;">
+		<h3 class="title" align="center">百度地图</h3>
+		<div style="width:100%;height:300px;" id="dituContent"></div>
+	</div>
+	
+	<div id="displayweb" style="display:none"></div>
+	<div id="phoneMenu" class="box mb context display_article dd article-dd" style="display:none">
+	<a href="javascript:">关于我们</a><br>
+	<a href="javascript:checkVersion();">检查更新</a><br>
+	<a href="javascript:quit();">退出应用</a>
+	</div>
+	<div style="display:none"><img id="smallImage" width="200" style="display:none"></div>
+</div>
+<footer id="footer">
+	<p class='tel'><a href='tel://400-8820608'><img src='images/icon_tel.png' /></a></p>
+	<p><a href='sms://15505514690'><img src='images/icon_email.png' /></a></p>
+	<p><a href="javascript:showMyselfMap()"><img src='images/icon_map.png' /></a></p>
+	<p><a href="javascript:gotoWeb('#contact')"><img src='images/icon_contact.png' /></a></p>
+	<p><a href="javascript:gotoWeb('#mainweb',2)"><img src='images/home_index.png' /></a></p>
+</footer>
+<div id='background' class='background' style='display:none; '></div>
+<div id='progressBar' class='progressBar' style='display:none; '>
+	<p align="center" style="text-align:center; alignment-adjust:auto">数据加载中，请稍等</p>
+</div>
+<script>
+	function addCaseEffect(){
+		TouchSlide({ 
+				slideCell:"#success",
+				mainCell:".bd ul", 
+				effect:"leftLoop", 
+			});
+	}
+	function addProductEffect(){
+		TouchSlide({ 
+				slideCell:"#product",
+				mainCell:".bd ul", 
+				effect:"leftLoop", 
+			});
+	}
+	function addBannerEffect(){
+		TouchSlide({ 
+				slideCell:"#product",
+				mainCell:".bd ul", 
+				effect:"leftLoop", 
+			});
+	}
+	
+	$(function(){
+		for(var k in menu){
+			var info=menu[k];
+			var data={id:info.id,menus:[],title:info.title,content:"内容等待加载......"};
+			delete info['title'];
+			delete info['id'];
+			data.menus=info;	
+			var html=bt('subviewports',data);
+			$("#subweb").append(html);	
+		}
+		//企业动态
+		ajaxData("#mnews","HNews.php");
+		//产品与服务
+		ajaxData("#product","HProduct.php",{},addProductEffect);
+		//我们的优势
+		ajaxData("#success","HCase.php",{},addCaseEffect);
+		//我们的优势
+		ajaxData("#ourAdvantage","HOurAdvantage.php");
+		//企业信息
+		ajaxData("#info_head","HComplayInfo.php");
+		});
+</script>
+</body>
+</html>
